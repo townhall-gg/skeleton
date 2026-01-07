@@ -1,0 +1,261 @@
+/* Auto-Skeleton Styles
+ * These CSS rules transform your actual UI into skeleton form
+ * Just wrap with <Skeleton loading={true}> and import this CSS
+ */
+
+/* Base variables */
+.skeleton-wrapper {
+  --skeleton-base: rgba(255, 255, 255, 0.1);
+  --skeleton-highlight: rgba(255, 255, 255, 0.2);
+  --skeleton-radius: 4px;
+  --skeleton-duration: 1.5s;
+}
+
+/* Pulse animation */
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Wave animation */
+@keyframes skeleton-wave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* When loading is active */
+.skeleton-loading {
+  /* Disable pointer events on skeleton */
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Text elements become skeleton bars */
+.skeleton-loading h1,
+.skeleton-loading h2,
+.skeleton-loading h3,
+.skeleton-loading h4,
+.skeleton-loading h5,
+.skeleton-loading h6,
+.skeleton-loading p,
+.skeleton-loading span:not(.skeleton-element),
+.skeleton-loading a,
+.skeleton-loading label,
+.skeleton-loading li,
+.skeleton-loading td,
+.skeleton-loading th,
+.skeleton-loading dt,
+.skeleton-loading dd {
+  color: transparent !important;
+  background: var(--skeleton-base) !important;
+  border-radius: var(--skeleton-radius) !important;
+  background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+}
+
+/* Text with wave animation */
+.skeleton-loading.skeleton-wave h1,
+.skeleton-loading.skeleton-wave h2,
+.skeleton-loading.skeleton-wave h3,
+.skeleton-loading.skeleton-wave h4,
+.skeleton-loading.skeleton-wave h5,
+.skeleton-loading.skeleton-wave h6,
+.skeleton-loading.skeleton-wave p,
+.skeleton-loading.skeleton-wave span:not(.skeleton-element),
+.skeleton-loading.skeleton-wave a,
+.skeleton-loading.skeleton-wave label,
+.skeleton-loading.skeleton-wave li {
+  background: linear-gradient(
+    90deg,
+    var(--skeleton-base) 25%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-base) 75%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: skeleton-wave var(--skeleton-duration) ease-in-out infinite !important;
+}
+
+/* Text with pulse animation */
+.skeleton-loading.skeleton-pulse h1,
+.skeleton-loading.skeleton-pulse h2,
+.skeleton-loading.skeleton-pulse h3,
+.skeleton-loading.skeleton-pulse h4,
+.skeleton-loading.skeleton-pulse h5,
+.skeleton-loading.skeleton-pulse h6,
+.skeleton-loading.skeleton-pulse p,
+.skeleton-loading.skeleton-pulse span:not(.skeleton-element),
+.skeleton-loading.skeleton-pulse a,
+.skeleton-loading.skeleton-pulse label,
+.skeleton-loading.skeleton-pulse li {
+  animation: skeleton-pulse var(--skeleton-duration) ease-in-out infinite !important;
+}
+
+/* Images become gray rectangles */
+.skeleton-loading img,
+.skeleton-loading video,
+.skeleton-loading canvas,
+.skeleton-loading svg:not([class*="icon"]),
+.skeleton-loading picture {
+  opacity: 0 !important;
+  background: var(--skeleton-base) !important;
+  border-radius: var(--skeleton-radius) !important;
+}
+
+/* Image containers get background */
+.skeleton-loading [class*="avatar"],
+.skeleton-loading [class*="image"],
+.skeleton-loading [class*="img"],
+.skeleton-loading [class*="thumbnail"],
+.skeleton-loading [class*="photo"],
+.skeleton-loading [class*="picture"] {
+  background: var(--skeleton-base) !important;
+  overflow: hidden;
+}
+
+/* Buttons become skeleton shapes */
+.skeleton-loading button,
+.skeleton-loading [role="button"],
+.skeleton-loading input[type="submit"],
+.skeleton-loading input[type="button"],
+.skeleton-loading .btn,
+.skeleton-loading [class*="button"] {
+  color: transparent !important;
+  background: var(--skeleton-base) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Inputs become skeleton */
+.skeleton-loading input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+.skeleton-loading textarea,
+.skeleton-loading select {
+  color: transparent !important;
+  background: var(--skeleton-base) !important;
+  border-color: transparent !important;
+}
+
+.skeleton-loading input::placeholder,
+.skeleton-loading textarea::placeholder {
+  color: transparent !important;
+}
+
+/* Checkboxes and radios */
+.skeleton-loading input[type="checkbox"],
+.skeleton-loading input[type="radio"] {
+  opacity: 0.3 !important;
+}
+
+/* Icons hide */
+.skeleton-loading [class*="icon"],
+.skeleton-loading svg[class*="icon"] {
+  opacity: 0 !important;
+}
+
+/* Cards and containers get subtle background */
+.skeleton-loading [class*="card"],
+.skeleton-loading [class*="panel"],
+.skeleton-loading [class*="box"] {
+  border-color: var(--skeleton-base) !important;
+}
+
+/* Badges and pills */
+.skeleton-loading [class*="badge"],
+.skeleton-loading [class*="pill"],
+.skeleton-loading [class*="tag"],
+.skeleton-loading [class*="chip"] {
+  color: transparent !important;
+  background: var(--skeleton-base) !important;
+}
+
+/* Wave animation for interactive elements */
+.skeleton-loading.skeleton-wave button,
+.skeleton-loading.skeleton-wave [role="button"],
+.skeleton-loading.skeleton-wave input,
+.skeleton-loading.skeleton-wave textarea,
+.skeleton-loading.skeleton-wave select,
+.skeleton-loading.skeleton-wave [class*="badge"],
+.skeleton-loading.skeleton-wave [class*="pill"] {
+  background: linear-gradient(
+    90deg,
+    var(--skeleton-base) 25%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-base) 75%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: skeleton-wave var(--skeleton-duration) ease-in-out infinite !important;
+}
+
+/* Pulse animation for interactive elements */
+.skeleton-loading.skeleton-pulse button,
+.skeleton-loading.skeleton-pulse [role="button"],
+.skeleton-loading.skeleton-pulse input,
+.skeleton-loading.skeleton-pulse textarea,
+.skeleton-loading.skeleton-pulse select,
+.skeleton-loading.skeleton-pulse [class*="badge"],
+.skeleton-loading.skeleton-pulse [class*="pill"],
+.skeleton-loading.skeleton-pulse [class*="avatar"],
+.skeleton-loading.skeleton-pulse [class*="image"] {
+  animation: skeleton-pulse var(--skeleton-duration) ease-in-out infinite !important;
+}
+
+/* Tables */
+.skeleton-loading table {
+  border-color: var(--skeleton-base) !important;
+}
+
+.skeleton-loading tr {
+  border-color: var(--skeleton-base) !important;
+}
+
+/* Dividers and separators */
+.skeleton-loading hr,
+.skeleton-loading [class*="divider"],
+.skeleton-loading [class*="separator"] {
+  background: var(--skeleton-base) !important;
+  border-color: var(--skeleton-base) !important;
+}
+
+/* Skeleton element (for custom shapes) */
+.skeleton-element {
+  background: var(--skeleton-base);
+  border-radius: var(--skeleton-radius);
+}
+
+.skeleton-wave .skeleton-element {
+  background: linear-gradient(
+    90deg,
+    var(--skeleton-base) 25%,
+    var(--skeleton-highlight) 50%,
+    var(--skeleton-base) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-wave var(--skeleton-duration) ease-in-out infinite;
+}
+
+.skeleton-pulse .skeleton-element {
+  animation: skeleton-pulse var(--skeleton-duration) ease-in-out infinite;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: light) {
+  .skeleton-wrapper {
+    --skeleton-base: rgba(0, 0, 0, 0.08);
+    --skeleton-highlight: rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Accessibility - respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-loading * {
+    animation: none !important;
+  }
+}
