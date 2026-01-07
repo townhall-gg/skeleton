@@ -1,8 +1,15 @@
 {
   "name": "@townhall-gg/skeleton",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Auto-skeleton loader - wrap your UI and it becomes a skeleton while loading",
-  "keywords": ["skeleton", "loader", "react", "loading", "placeholder", "auto-skeleton"],
+  "keywords": [
+    "skeleton",
+    "loader",
+    "react",
+    "loading",
+    "placeholder",
+    "auto-skeleton"
+  ],
   "author": "Townhall <hello@townhall.gg>",
   "license": "MIT",
   "repository": {
@@ -31,8 +38,13 @@
     },
     "./styles.css": "./dist/styles.css"
   },
-  "files": ["dist", "README.md"],
-  "sideEffects": ["*.css"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch"
